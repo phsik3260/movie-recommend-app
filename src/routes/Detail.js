@@ -27,13 +27,22 @@ export default function Detail() {
       {loading ? (
         <Loading />
       ) : (
-        <div className={styles.container}>
+        <div
+          className={styles.container}
+          style={{
+            backgroundImage: `url(https://image.tmdb.org/t/p/w500${movie.backdrop_path})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        >
           <img
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
             className={styles.poster}
           />
           <div className={styles.info}>
-            <div className={styles.title}>{movie.original_title}</div>
+            <div className={styles.title}>
+              {movie.original_title.toUpperCase()}
+            </div>
             <ul className={styles.genres}>
               {movie.genres.map((genre, index) => (
                 <li className={styles.genre} key={index}>

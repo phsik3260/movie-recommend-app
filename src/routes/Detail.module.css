@@ -7,12 +7,17 @@
 
 .poster {
   height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0.4rem 0.4rem 0.6rem;
 }
 
 .info {
   display: flex;
   flex-direction: column;
-  margin: 0 1.2vw;
+  width: 100%;
+  margin-left: 1.2vw;
+  padding: 0 1.2vw;
+  background-color: #f5f5f5;
+  box-shadow: rgba(0, 0, 0, 0.4) 0.4rem 0.4rem 0.6rem;
 }
 
 .info .title {
@@ -66,7 +71,10 @@
     padding: 2.4vw;
   }
   .info {
-    margin-top: 1rem;
+    margin-left: 0;
+    margin-top: 2.4vw;
+    padding-top: 2.4vw;
+    padding-bottom: 4.8vw;
   }
   .info .title {
     font-size: 3rem;
