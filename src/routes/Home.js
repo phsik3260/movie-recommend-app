@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
-import { Container } from "react-bootstrap";
+import styles from "./Home.module.css";
+import Loading from "../components/Loading";
 
 const API_KEY = "2bdbfd4d9582dc88ecb58370aae3e052";
 
@@ -23,13 +23,15 @@ export default function Home() {
   return (
     <>
       {loading ? (
-        <div className={styles.loading}>loading...</div>
+        <Loading />
       ) : (
         <div className={styles.container}>
           {movies.map((movie) => (
             <Link key={movie.id} to={`detail/${movie.id}`}>
               <img
+                className={styles.poster}
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                alt={movie.id}
               />
             </Link>
           ))}
