@@ -19,7 +19,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 50px;
+  margin-left: 30px;
+  margin-right: 45px;
 }
 
 .navBar__lists {
@@ -27,7 +28,7 @@
   text-align: center;
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 45px;
 }
 
 .navBar__lists > li {

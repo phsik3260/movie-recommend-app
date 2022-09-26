@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Footer from "../components/Footer";
 import Loading from "../components/Loading";
 import Movie from "../components/Movie";
 import NavBar from "../components/NavBar";
@@ -22,20 +23,21 @@ const Popular = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <NavBar />
       {loading ? (
         <Loading />
       ) : (
-        <>
+        <div>
           <div className={styles.container}>
             {movies.map((movie) => (
               <Movie key={movie.id} movie={movie} />
             ))}
           </div>
-        </>
+          <Footer />
+        </div>
       )}
-    </div>
+    </>
   );
 };
 
