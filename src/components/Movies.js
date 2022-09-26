@@ -9,7 +9,7 @@ const Movies = ({ movie }) => {
       </div>
       <div className={styles.movie__info}>
         <h2 className={styles.movie__info__title}>{movie.title}</h2>
-        <div className={styles.movie__info__release_date}>
+        <div className={styles.movie__info__releaseDate}>
           {movie.release_date}
         </div>
         <div className={styles.movie__info__overview}>{movie.overview}</div>

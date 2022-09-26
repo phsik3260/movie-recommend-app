@@ -1,12 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./routes/Home";
+import NowPlaying from "./routes/NowPlaying";
+import Upcoming from "./routes/Upcoming";
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<NowPlaying />} />
+        <Route path="/now-playing" element={<NowPlaying />} />
+        <Route path="/upcoming" element={<Upcoming />} />
       </Routes>
     </Router>
   );
