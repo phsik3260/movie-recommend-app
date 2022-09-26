@@ -1,9 +1,13 @@
 .movie {
+  cursor: pointer;
   display: flex;
   gap: 15px;
   padding: 20px;
-  /* background-color: blue; */
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.movie:hover {
+  transform: scale(1.02);
 }
 
 .movie__poster {
@@ -21,7 +25,6 @@
 .movie__info {
   width: 100%;
   height: 300px;
-  /* background-color: red; */
   overflow-y: scroll;
 }
 

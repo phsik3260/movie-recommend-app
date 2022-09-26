@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Loading from "../components/Loading";
-import Movies from "../components/Movies";
+import Movie from "../components/Movie";
 import NavBar from "../components/NavBar";
 import styles from "./Upcoming.module.css";
 
@@ -30,7 +30,7 @@ const Upcoming = () => {
         <>
           <div className={styles.container}>
             {movies.map((movie) => (
-              <Movies key={movie.id} movie={movie} />
+              <Movie key={movie.id} movie={movie} />
             ))}
           </div>
         </>

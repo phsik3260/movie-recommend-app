@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./Movies.module.css";
+import styles from "./Movie.module.css";
 
-const Movies = ({ movie }) => {
+const Movie = ({ movie }) => {
   return (
     <div key={movie.id} className={styles.movie}>
       <div className={styles.movie__poster}>
@@ -18,4 +18,4 @@ const Movies = ({ movie }) => {
   );
 };
 
-export default Movies;
+export default Movie;
