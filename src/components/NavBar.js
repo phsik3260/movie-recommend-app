@@ -21,6 +21,11 @@ const NavBar = () => {
             upcoming
           </Link>
         </li>
+        <li>
+          <Link to="/popular" style={{ all: "unset" }}>
+            popular
+          </Link>
+        </li>
       </ul>
     </nav>
   );
