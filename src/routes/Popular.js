@@ -5,7 +5,7 @@ import Movie from "../components/Movie";
 import NavBar from "../components/NavBar";
 import styles from "./Popular.module.css";
 
-const Popular = () => {
+const Popular = ({ genres }) => {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
 
@@ -16,7 +16,7 @@ const Popular = () => {
     setTimeout(() => setLoading(false), 1200);
   };
 
-  console.log(movies);
+  // console.log(movies);
 
   useEffect(() => {
     getPopular();
@@ -31,7 +31,7 @@ const Popular = () => {
         <div>
           <div className={styles.container}>
             {movies.map((movie) => (
-              <Movie key={movie.id} movie={movie} />
+              <Movie key={movie.id} movie={movie} genres={genres} />
             ))}
           </div>
           <Footer />

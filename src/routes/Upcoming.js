@@ -5,7 +5,7 @@ import Movie from "../components/Movie";
 import NavBar from "../components/NavBar";
 import styles from "./Upcoming.module.css";
 
-const Upcoming = () => {
+const Upcoming = ({ genres }) => {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
 
@@ -16,7 +16,7 @@ const Upcoming = () => {
     setTimeout(() => setLoading(false), 1200);
   };
 
-  console.log(movies);
+  // console.log(movies);
 
   useEffect(() => {
     getUpcoming();
@@ -31,7 +31,7 @@ const Upcoming = () => {
         <div>
           <div className={styles.container}>
             {movies.map((movie) => (
-              <Movie key={movie.id} movie={movie} />
+              <Movie key={movie.id} movie={movie} genres={genres} />
             ))}
           </div>
           <Footer />

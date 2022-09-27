@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Movie.module.css";
 
-const Movie = ({ movie }) => {
+const Movie = ({ movie, genres }) => {
   return (
     <div key={movie.id} className={styles.movie}>
       <div className={styles.movie__poster}>
@@ -9,6 +9,12 @@ const Movie = ({ movie }) => {
       </div>
       <div className={styles.movie__info}>
         <h2 className={styles.movie__info__title}>{movie.title}</h2>
+        <ul className={styles.movie__info__genres}>
+          {movie.genre_ids.map((id) => {
+            const result = genres.find((genre) => genre.id === id);
+            return <li key={id}>{result.name}</li>;
+          })}
+        </ul>
         <div className={styles.movie__info__releaseDate}>
           {movie.release_date}
         </div>
