@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Detail from "./routes/Detail";
 import NowPlaying from "./routes/NowPlaying";
 import Popular from "./routes/Popular";
 import Upcoming from "./routes/Upcoming";
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/now-playing" element={<NowPlaying genres={genres} />} />
         <Route path="/upcoming" element={<Upcoming genres={genres} />} />
         <Route path="/popular" element={<Popular genres={genres} />} />
+        <Route path="/movie/:id" element={<Detail />} />
       </Routes>
     </Router>
   );

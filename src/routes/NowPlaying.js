@@ -28,7 +28,7 @@ const NowPlaying = ({ genres }) => {
       {loading ? (
         <Loading />
       ) : (
-        <div>
+        <div className={styles.wrapper}>
           <div className={styles.container}>
             {movies.map((movie) => (
               <Movie key={movie.id} movie={movie} genres={genres} />
