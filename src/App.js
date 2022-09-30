@@ -19,7 +19,7 @@ const App = () => {
   }, []);
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<NowPlaying genres={genres} />} />
         <Route path="/now-playing" element={<NowPlaying genres={genres} />} />
